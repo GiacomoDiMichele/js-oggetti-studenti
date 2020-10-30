@@ -2,6 +2,7 @@
 //creare un array di oggetti "studente". Ciclare su tutti gli studenti e stampare per ciascuno il nome e il cognome
 //tramite 3 prompt, chiedere all'utente il nome, il cognome e l'età di un nuovo studente. Creare con questi dati un nuovo oggetto e inserirlo nell'array del punto precedente.
 
+//creare un array di oggetti
 var studenti = [
         {
             'nome': 'giacomo',
@@ -40,13 +41,22 @@ var studenti = [
         },
     ];
 
+    //creare un ciclo sempre per l'array studenti stampando tutte le proprietà e il relativo valore dell'oggetto
     for (var i = 0; i < studenti.length; i++) {
         var studente_corrente =  studenti[i];
-        var nome_alunno = studente_corrente['nome'];
-        var cognome_alunno = studente_corrente['cognome'];
-        var eta_alunno = studente_corrente['eta'];
 
         for (var chiave in studente_corrente) {
             console.log(chiave + ' = ' + studente_corrente[chiave]);
+        }
+    }
+
+    //creare un ciclo sempre per l'array studenti, includendo solamente le proprietà nome e cognome dell'oggetto selezionato, escludendo eta
+    for (var i = 0; i < studenti.length; i++) {
+        var studente_corrente =  studenti[i];
+
+        for (var chiave in studente_corrente) {
+            if (chiave != 'eta') {
+                console.log(chiave + ' = ' + studente_corrente[chiave]);
+            }
         }
     }
