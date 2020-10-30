@@ -42,8 +42,11 @@ var studenti = [
 
     for (var i = 0; i < studenti.length; i++) {
         var studente_corrente =  studenti[i];
-    }
+        var nome_alunno = studente_corrente['nome'];
+        var cognome_alunno = studente_corrente['cognome'];
+        var eta_alunno = studente_corrente['eta'];
 
-    for (var chiave in studente_corrente) {
-        
+        for (var chiave in studente_corrente) {
+            console.log(chiave + ' = ' + studente_corrente[chiave]);
+        }
     }
