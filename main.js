@@ -50,6 +50,7 @@ var studenti = [
         }
     }
 
+
     //creare un ciclo sempre per l'array studenti, includendo solamente le proprietà nome e cognome dell'oggetto selezionato, escludendo eta
     for (var i = 0; i < studenti.length; i++) {
         var studente_corrente =  studenti[i];
@@ -60,3 +61,19 @@ var studenti = [
             }
         }
     }
+
+    //creare 3 prompt e metterli in una variabile, da inserire nell'oggetto
+    var nome_inserito = prompt('inserisci il tuo nome');
+    var cognome_inserito = prompt('inserisci il tuo cognome');
+    var eta_inserita = parseInt(prompt('inserisci la tua età'));
+
+    var nuovo_studente = {
+        nome: nome_inserito,
+        cognome: cognome_inserito,
+        età: eta_inserita
+    }
+
+    //pushare l'oggetto nuovo creato all'interno dell'array studenti
+    studenti.push(nuovo_studente);
+
+    console.log(studenti)
